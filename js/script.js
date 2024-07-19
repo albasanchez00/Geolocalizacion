@@ -21,7 +21,7 @@ function initMap() {
         } else {
             alert("Su navegador no soporta la geolocalicación.")
         }
-    }, 6000) //Cierre del setInterval -> 10000 ms = 10 seg
+    }, 10000) //Cierre del setInterval -> 10000 ms = 10 seg
 
 } //fin funcion
 
@@ -32,7 +32,7 @@ function verMapa(pos) {
     let longitud = pos.coords.longitude;
     let mostrarLonLat = document.querySelector("#localizacion-info");
     mostrarLonLat.innerHTML = `Latitud = ${latitud} | Longitud = ${longitud}`;
-    let latlon=new google.maps.LatLng(latitud,longitud);
+    let latlon=new google.maps.LatLng(latitud, longitud);
 
     // Opciones de visualizacion en el Google Maps
     let myOptions={
@@ -60,7 +60,7 @@ function actualizarMap(pos) {
 
     mostrarLonLat.innerHTML = `Latitud = ${latitud} | Longitud = ${longitud}`;
     
-    let latlon=new google.maps.LatLng(latitud,longitud);
+    let latlon=new google.maps.LatLng(latitud, longitud);
 
     // Mover el marcador a una nueva posición.
     marker.setPosition(latlon);
